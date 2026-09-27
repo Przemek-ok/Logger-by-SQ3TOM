@@ -1,0 +1,52 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:background="#080a0d" android:fillViewport="true">
+ <LinearLayout android:orientation="vertical" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+  <TextView android:text="Logger by SQ3TOM" android:textColor="#ffffff" android:textSize="22sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <TextView android:id="@+id/status" android:text="● gotowy" android:textColor="#42c77a" android:layout_marginBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+   <Button android:id="@+id/tabTerrain" android:text="TEREN" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+   <Button android:id="@+id/tabHistory" android:text="LOG" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+   <Button android:id="@+id/tabAct" android:text="AKTYW." android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+  </LinearLayout>
+  <LinearLayout android:id="@+id/terrain" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+   <EditText android:id="@+id/call" android:hint="Znak korespondenta" android:textColor="#ffffff" android:textColorHint="#98a2ad" android:inputType="textCapCharacters" android:layout_marginTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <Button android:id="@+id/lookup" android:text="⌕  SZUKAJ W QRZ" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <TextView android:id="@+id/person" android:textColor="#ffffff" android:visibility="gone" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <EditText android:id="@+id/datetime" android:hint="UTC" android:textColor="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <Spinner android:id="@+id/band" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+    <Spinner android:id="@+id/mode" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+   </LinearLayout>
+   <EditText android:id="@+id/freq" android:hint="Częstotliwość MHz" android:textColor="#ffffff" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <EditText android:id="@+id/rstSent" android:hint="RST mój" android:text="59" android:textColor="#ffffff" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/rstRcvd" android:hint="RST odebrany" android:text="59" android:textColor="#ffffff" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/power" android:hint="Moc W" android:text="5" android:textColor="#ffffff" android:inputType="numberDecimal" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+   </LinearLayout>
+   <EditText android:id="@+id/grid" android:hint="Locator / QTH" android:textColor="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <Button android:id="@+id/gps" android:text="📍 GPS / LOCATOR" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <TextView android:id="@+id/gpsInfo" android:textColor="#98a2ad" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <EditText android:id="@+id/comment" android:hint="Komentarz / QRZ COMMENT" android:textColor="#ffffff" android:gravity="top" android:minLines="3" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <Button android:id="@+id/sat" android:text="🛰  SAT / SPLIT" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <LinearLayout android:id="@+id/satBox" android:orientation="vertical" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <Spinner android:id="@+id/satellite" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Spinner android:id="@+id/satType" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/satRx" android:hint="RX MHz" android:textColor="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/satTx" android:hint="TX MHz" android:textColor="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   </LinearLayout>
+   <Button android:id="@+id/save" android:text="✓  ZAPISZ QSO" android:backgroundTint="#e53935" android:textColor="#ffffff" android:textSize="18sp" android:layout_marginTop="8dp" android:layout_width="match_parent" android:layout_height="60dp"/>
+   <Button android:id="@+id/newQso" android:text="＋ NOWE QSO" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  </LinearLayout>
+  <LinearLayout android:id="@+id/history" android:orientation="vertical" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <LinearLayout android:id="@+id/activations" android:orientation="vertical" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+   <TextView android:text="Program aktywacji" android:textColor="#ffffff" android:textSize="18sp" android:textStyle="bold" android:layout_marginTop="12dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <Button android:id="@+id/pota" android:text="🌲 POTA" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <Button android:id="@+id/sota" android:text="⛰ SOTA" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <Button android:id="@+id/llota" android:text="📍 LLOTA" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <Button android:id="@+id/wwff" android:text="🌿 WWFF" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <EditText android:id="@+id/actRef" android:hint="Numer referencyjny" android:textColor="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <EditText android:id="@+id/actQth" android:hint="Miejsce / QTH" android:textColor="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <Button android:id="@+id/saveAct" android:text="ZAPISZ AKTYWACJĘ" android:backgroundTint="#e53935" android:textColor="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <TextView android:id="@+id/actInfo" android:textColor="#98a2ad" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  </LinearLayout>
+ </LinearLayout>
+</ScrollView>
