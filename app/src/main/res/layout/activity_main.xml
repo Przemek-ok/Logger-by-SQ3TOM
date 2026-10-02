@@ -1,4 +1,8 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:background="#080a0d" android:fillViewport="true">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#080a0d"
+    android:fillViewport="true">
  <LinearLayout android:orientation="vertical" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
   <TextView android:text="Logger by SQ3TOM" android:textColor="#ffffff" android:textSize="22sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content"/>
   <TextView android:id="@+id/status" android:text="● gotowy" android:textColor="#42c77a" android:layout_marginBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
