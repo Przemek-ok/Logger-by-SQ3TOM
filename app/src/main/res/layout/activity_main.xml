@@ -11,6 +11,7 @@
    <Button android:id="@+id/tabHistory" android:text="LOG" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
    <Button android:id="@+id/tabAct" android:text="AKTYW." android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
   </LinearLayout>
+  <LinearLayout android:id="@+id/terrain" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"> 
   <EditText android:id="@+id/call" android:hint="Znak korespondenta" android:textColor="#ffffff" android:textSize="24sp" android:textStyle="bold" android:inputType="textCapCharacters" android:layout_marginTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
    <Button android:id="@+id/lookup" android:text="⌕  SZUKAJ W QRZ" android:layout_width="match_parent" android:layout_height="wrap_content"/>
    <TextView android:id="@+id/person" android:textColor="#ffffff" android:textSize="18sp" android:visibility="visible" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
